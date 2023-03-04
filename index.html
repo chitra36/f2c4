@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        .nav{
+        position: absolute;
+        background: #111111;
+        height: 70px;
+        width: 100%;
+
+       }
+      .nav- h2 {
+    color: white;
+    display: inline;
+    padding-top: 15px;
+    margin-top: 0px;
+  }
+  .light{
+    float: right;
+    text-align: right;
+    display: inline;
+    right: 10px;
+   
+    font-size: 20px;
+    position: relative;
+  }
+        *,
+*::after,
+*::before{
+    padding: 0;                   
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ 
+         #button{
+            background: #111111;
+            border-color: white;
+            color: white;
+            position: absolute;
+           
+          }
+           
+           #CreatePost{
+            background: #111111;
+            border-color: white;
+            color: white;
+            position: absolute;
+           }
+html > body{
+    height: 100vh;              
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+p{
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
+.para-one p:nth-child(2){
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 2px solid rgb(0, 0, 0);
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    background-color: rgb(255, 253, 253);
+    color: rgb(0, 0, 0); 
+
+}
+
+li{
+    
+    display: list-item;
+    list-style-position: inside;
+    margin-left: 15px;
+
+
+}
+
+
+.para-one,.para-two,.para-three{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+
+
+
+
+.paragraph{
+    display: inline;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+
+
+
+img{
+    height: 300px;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.para-three::after{
+    
+    font-size: 1rem;
+    margin-left: 13px;
+}
+.para-three::before{
+    
+    font-size: 2rem;
+    margin-left: 13px;
+}
+.para-one::after{
+   
+    font-size: 1rem;
+    margin-left: 13px;
+}
+.para-two::after{
+    
+    font-size: 1rem;
+    margin-left: 13px;
+}
+h2{
+    text-align: left;
+}
+#editForm{
+    display: none;
+    border-color: white;
+}
+html,body{
+  padding:0;
+  margin:0;
+}
+h1{text-align:center}
+.cover{
+  background:rgba(0,0,0,0);
+  position:fixed;
+  width:100%;
+  height:100%;
+  display: none;
+
+}
+.text{
+  height:20px;
+  
+}
+.contents{
+  width:500px;
+  height:300px;
+  background:#f1f1f1;
+  margin:30px auto;
+  border:2px solid #ccc;
+  border-radius:30px;
+  position:relative;
+  text-align:center;
+}
+.close{
+  border:2px solid #ccc;
+  border-radius:15px;
+  padding:5px 15px;
+  position:absolute;
+  bottom:15px;
+  text-align:center;
+  left:10%;
+  width:100px;
+  box-shadow:inset 0px 0px 10px 5px #ccc;
+  
+}
+.cancle{
+  border:2px solid #ccc;
+  border-radius:15px;
+  padding:5px 15px;
+  position:absolute;
+  bottom:15px;
+  text-align:center;
+  left:60%;
+  width:100px;
+  box-shadow:inset 0px 0px 10px 5px #ccc;
+  }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h2>Blogging Website</h2>
+       <a href="edit.html"> <button type="button" class="light">Create New Post</button></a>
+        </div><br>
+        <br>
+        <br> <br> <br>
+    
+    
+    
+    <div class="container">
+        <div class="heading">
+             
+          
+           
+        </div>
+        <div class="paragraph">
+            
+            <div class="para-three">
+              
+            <h2 >My Heading</h2>
+            <div class=" written">
+              <div>
+                <p id="message">This is a short note. It is tightly focused and brief; its message can be rapidly assimilated by the reader. Like Robert Boyle in the seventeenth century,
+                  <br> I bemoan the modern focus on lengthier publications, possibly the result of pressure from managers on academics to encourage them to publish long and 'significant' papers in leading journals.
+                   Yet, <br>the most important paper published in the life sciences during the twentieth century was only two pages long.</p>
+             
+                   <div class="cover">
+                    <h2>Create A Post<h2>
+                        <input type="text" id="head" placeholder="Heading"><br><br>
+                        
+                        <input type="text" id="Post" placeholder="enter">
+                        <br><br>
+                        <button id="btn" onclick="fn()">Publish Post</button>
+                        <div>
+                            <p id="result"></p>
+                        
+                        <button onclick="clearContent()">cancle Post</button>
+                        </div>
+               </div>
+                  
+                       <a href="savepost.html" style="padding-right: 50px;">  <button><h2>Edit Post</h2></button></a>
+                       <a href="index.html" >   <button  style="margin-right: 15px;" ><h2>Delete Post</h2></button></a>
+               </div>
+            </div>
+          </div> 
+    
+       </div> 
+</div>
+ <div class="heading">
+             
+          
+           
+        </div>
+        <div class="paragraph">
+            
+            <div class="para-three">
+              
+            <h2 >My Heading</h2>
+           <div class=" written">
+            <div>
+                <p id="message">The stock market allows buyers and sellers of securities to meet, interact, and transact.
+                    sellers are assured of a fair price, high degree of liquidity, 
+                    and transparency as market participants compete in the open market.</p>
+             
+                    <div class="cover">
+                        <h2>Create A Post<h2>
+                            <input type="text" id="head" placeholder="Heading"><br><br>
+                            
+                            <input type="text" id="Post" placeholder="enter">
+                            <br><br>
+                            <button id="btn" onclick="fn()">Publish Post</button>
+                            <div>
+                                <p id="result"></p>
+                            
+                            <button onclick="clearContent()">cancle Post</button>
+                            </div>
+                 </div>
+                 <a href="savepost.html" style="padding-right: 50px;">  <button><h2>Edit Post</h2></button></a>
+                 <a href="index.html" >   <button  style="margin-right: 15px;" ><h2>Delete Post</h2></button></a>
+            </div>
+            
+            
+      
+        </div>
+      </div>
+    </div>  
+    <div class="heading">
+             
+          
+           
+    </div>
+    <div class="paragraph">
+        
+        <div class="para-three">
+          
+        <h2 >My Heading</h2>
+       <div class=" written">
+        <div>
+            <p id="message">The stock market allows buyers and sellers of securities to meet, interact, and transact.
+                sellers are assured of a fair price, high degree of liquidity, 
+                and transparency as market participants compete in the open market.</p>
+         
+                <div class="cover">
+                    <h2>Create A Post<h2>
+                        <input type="text" id="head" placeholder="Heading"><br><br>
+                        
+                        <input type="text" id="Post" placeholder="enter">
+                        <br><br>
+                        <button id="btn" onclick="fn()">Publish Post</button>
+                        <div>
+                            <p id="result"></p>
+                        
+                        <button onclick="clearContent()">cancle Post</button>
+                        </div>
+             </div>
+             <a href="savepost.html" style="padding-right: 50px;">  <button><h2>Edit Post</h2></button></a>
+             <a href="index.html" >  <button  style="margin-right: 15px;" ><h2>Delete Post</h2></button></a>
+        </div>
+        
+        
+  
+    </div>
+  </div>
+</div>  
+<div class="heading">
+             
+          
+           
+</div>
+<div class="paragraph">
+    
+    <div class="para-three">
+      
+    <h2 >My Heading</h2>
+   <div class=" written">
+    <div>
+        <p id="message">This is a short note. It is tightly focused and brief; its message can be rapidly assimilated by the reader.
+           Like Robert Boyle in the seventeenth century, I bemoan the modern focus on lengthier publications, possibly the result of pressure from managers on academics to encourage them to publish long and 'significant' papers in leading journals. Yet, the most important paper published in the life sciences during the twentieth century was only two pages long.</p>
+     
+            <div class="cover">
+                <h2>Create A Post<h2>
+                    <input type="text" id="head" placeholder="Heading"><br><br>
+                    
+                    <input type="text" id="Post" placeholder="enter">
+                    <br><br>
+                    <button id="btn" onclick="fn()">Publish Post</button>
+                    <div>
+                        <p id="result"></p>
+                    
+                    <button onclick="clearContent()">cancle Post</button>
+                    </div>
+         </div>
+         <a href="savepost.html" style="padding-right: 50px;">  <button><h2>Edit Post</h2></button></a>
+         <a href="index.html" >   <button  style="margin-right: 15px;" ><h2>Delete Post</h2></button></a>
+    </div>
+    
+    
+
+</div>
+</div>
+</div>  
+<div class="heading">
+             
+          
+           
+</div>
+<div class="paragraph">
+    
+    <div class="para-three">
+      
+    <h2 >My Heading</h2>
+   <div class=" written">
+    <div>
+        <p id="message">This is a short note. It is tightly focused and brief; its message can be rapidly assimilated by the reader. 
+          Like Robert Boyle in the seventeenth century, I bemoan the modern focus on lengthier publications, possibly the result of pressure from managers on academics to encourage them to publish long and 'significant' papers in leading journals. Yet, the most important paper published in the life sciences during the twentieth century was only two pages long.</p>
+          <div class="cover">
+            <h2>Create A Post<h2>
+                <input type="text" id="head" placeholder="Heading"><br><br>
+                
+                <input type="text" id="Post" placeholder="enter">
+                <br><br>
+                <button id="btn" onclick="fn()">Publish Post</button>
+                <div>
+                    <p id="result"></p>
+                
+                <button onclick="clearContent()">cancle Post</button>
+                </div>
+     </div>
+          
+     <a href="savepost.html" style="padding-right: 50px;">  <button><h2>Edit Post</h2></button></a>
+         <a href="index.html" onclick="">   <button  style="margin-right: 15px;" ><h2>Delete Post</h2></button></a>
+    </div>
+    
+    
+
+</div>
+</div>
+</div>  
+</body>
+</html>
+<script>
+   function fn(){
+    var Name = document.getElementById('name').value;
+  var heading = document.getElementById('Post').value;
+    document.getElementById('result').innerHTML += '<br>' +heading + Name ;
+}
+function clearContent(){
+    document.getElementById('result').innerHTML = '';
+}
+
+</script>

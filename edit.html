@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .editbox{
+            height: 500px;
+            width: 800px;
+            border-radius: 4px;
+            margin-left: 60px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        }
+
+       #head
+       {
+      height:40px;
+      width:500px;
+      margin-left: 30px;}
+      #Post{
+       height:200px;
+      width:500px;
+      margin-left: 30px;
+       }
+       #btn{
+    margin-left: 30px;
+}
+#delete{
+    margin-left: 30px;
+}
+    </style>
+</head>
+<body>
+    <div class="editbox">
+    <h1>Create A Post<h1>
+        <input type="text" id="head" placeholder="Heading"><br><br>
+        
+        <input type="text" id="Post" placeholder="enter">
+        <br><br>
+        <button id="btn" onclick="fn()">Publish Post</button>
+        <div>
+            <p id="result"></p>
+        
+        <button id="delete" onclick="clearContent()">Delete Post</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+  function fn(){
+    var Name = document.getElementById('Post').value;
+  var heading = document.getElementById('head').value;
+    document.getElementById('result').innerHTML += '<br>' +heading + Name ;
+}
+function clearContent(){
+    document.getElementById('result').innerHTML = '';
+}
+    $(function(){
+  $("button").click(function(){
+    $(".cover").fadeIn("300");
+  })
+  $(".cover,.close").click(function(){
+    $(".cover").fadeOut("300");
+  })
+  $(".contents").click(function(e){
+    e.stopPropagation();
+  })
+})
+
+
+</script>
